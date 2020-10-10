@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="addAmount(f.value)">
+  <div class="form-group">
+    <input style="width: 100px;" name="amount" ngModel required="" type="text" class="form-control" placeholder="Amount" />
+  </div>
+  <div class="form-group">
+    <input
+    style="width: 400px;"
+      name="description"
+      ngModel
+      required=""
+      type="text"
+      class="form-control"
+      placeholder="Description"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>

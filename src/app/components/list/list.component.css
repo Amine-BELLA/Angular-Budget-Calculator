@@ -1,0 +1,17 @@
+.list-container {
+    display: flex;
+   justify-content: center;
+}
+
+.list-item {
+    width: 400px;
+    margin-right: 30px;
+}
+
+.income {
+    color: #40a98b;
+}
+
+.expense {
+    color:#dc6352
+}

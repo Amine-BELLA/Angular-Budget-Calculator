@@ -1,0 +1,13 @@
+.header-container {
+    height: 200px;
+    background-color: #161c2c;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.header-container p {
+    color: white;
+    margin: auto;
+}

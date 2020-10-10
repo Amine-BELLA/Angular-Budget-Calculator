@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-right: 20px;
+}
+
+form button{
+    height: 36px;
+    outline: none;
+    border: none;
+}
+
+form input {
+    background-color: rgb(236, 236, 236);
+}

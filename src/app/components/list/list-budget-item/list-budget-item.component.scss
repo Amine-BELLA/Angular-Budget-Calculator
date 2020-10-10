@@ -1,0 +1,63 @@
+.list-budget-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(236, 236, 236);
+    height: 25px;
+    padding-right: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.description {
+    flex: 1;
+}
+
+.amount {
+    color: white;
+}
+
+.income .description {
+    color: #40a98b;
+}
+.income .amount {
+    background-color: #40a98b ;
+}
+
+.expense .description {
+    color: #dc6352;
+}
+
+.expense .amount {
+    background-color: #dc6352 ;
+}
+
+.delete-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #161c2c;
+    color: white;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.list-budget-item:hover {
+    cursor: pointer;
+    .delete-icon {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+i{
+    position: relative;
+    top: 5px;
+}
