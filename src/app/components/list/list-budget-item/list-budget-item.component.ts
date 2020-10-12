@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { BudgetItem } from 'src/app/shared/models/budget-item';
 
 @Component({
   selector: 'app-list-budget-item',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBudgetItemComponent implements OnInit {
 
+  @Input() isIncome: boolean = true;
+  @Input() item: BudgetItem;
+
+  @Output() delete: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  deleteBudgetItem(payload) {
+    this.delete.emit(payload);
   }
 
 }

@@ -1,13 +1,30 @@
-<hr>
+<hr />
 <div class="list-container">
   <div class="list-item">
     <h6 class="income">INCOME</h6>
-    <app-list-budget-item></app-list-budget-item>
+    <div *ngFor="let item of itemsList">
+      <div *ngIf="item.amount > 0">
+        <app-list-budget-item
+          [item]="item"
+          [isIncome]="true"
+          (delete)="deleteItem(item)"
+        >
+        </app-list-budget-item>
+      </div>
+    </div>
   </div>
 
   <div class="list-item">
     <h6 class="expense">EXPENSE</h6>
-    <app-list-budget-item></app-list-budget-item>
-
+    <div *ngFor="let item of itemsList">
+      <div *ngIf="item.amount < 0">
+        <app-list-budget-item
+          (delete)="deleteItem(item)"
+          [item]="item"
+          [isIncome]="false"
+        >
+        </app-list-budget-item>
+      </div>
+    </div>
   </div>
 </div>

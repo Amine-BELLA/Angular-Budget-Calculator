@@ -10,6 +10,7 @@ import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
 import { ListBudgetItemComponent } from './components/list/list-budget-item/list-budget-item.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListBudgetItemComponent } from './components/list/list-budget-item/list
     HeroComponent,
     FormComponent,
     ListComponent,
-    ListBudgetItemComponent
+    ListBudgetItemComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

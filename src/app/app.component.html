@@ -1,4 +1,4 @@
 <app-header></app-header>
-<app-hero></app-hero>
-<app-form></app-form>
-<app-list></app-list>
+<app-hero [balance]='budget'></app-hero>
+<app-form (formSubmit)="getItem($event)"></app-form>
+<app-list [itemsList]='budgetItems' (deleteFromList)='deleteFromBudgetItems($event)' ></app-list>
